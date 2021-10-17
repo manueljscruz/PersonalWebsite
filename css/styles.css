@@ -1,0 +1,110 @@
+body{
+    background-color: #0F0A0A;
+}
+
+/*
+#0F0A0A
+#F5EFED
+#32746D
+#F26419
+#8B5D33
+*/
+header {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	position: fixed;
+	left: 0;
+    right: 0;
+}
+
+#home{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/cover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#cover-content{
+    margin: auto;
+    text-align: center;
+}
+
+h1{
+    color: #F26419;
+    font-family: 'montserratblack';
+}
+
+h3{
+    color:#F5EFED;
+    font-family: 'montserratbold';
+}
+
+.h3-alternative{
+    color:#F26419;
+    font-family: 'montserratbold';
+}
+
+h5{
+    color: #8B5D33;
+    font-family: 'montserratmedium';
+}
+
+p{
+    color:#F5EFED;
+    font-family: 'montserratregular';
+}
+
+.tablink{
+    background-color: transparent;
+    font-family: 'montserratsemibold';
+    color: #F5EFED;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+.tablink:hover{
+    background-color: rgba(245, 239, 237, .2);
+    color: #F26419;
+}
+
+.link-active{
+    color: #F26419;
+}
+
+.tabcontent{
+    display: none;
+    align-items: center;
+}
+
+.tab-active{
+    display: flex;
+    height: 100vh;
+}
+
+.about-list{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a{
+    color: #F5EFED;
+    text-decoration: none ;
+}
+
+li{
+    font-family: 'montserratregular';
+}
+
+a:hover{
+    color: #F26419;
+}
