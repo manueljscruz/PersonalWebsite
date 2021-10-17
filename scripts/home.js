@@ -31,8 +31,20 @@ function openPage(pageName, element){
     if(tab != null && tablink != null){
         tab.classList.add("tab-active");
         tablink.classList.add("link-active");
-    }
-        
-
-    
+    } 
 }
+
+
+var embed = new Twitch.Embed("twitch-embed", {
+    width: 1280,
+    height: 480,
+    channel: "mcthewhite",
+    layout: "video",
+    autoplay: false,
+    parent: ["localhost"]
+  });
+
+  embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+    var player = embed.getPlayer();
+    player.play();
+  });

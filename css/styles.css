@@ -108,3 +108,26 @@ li{
 a:hover{
     color: #F26419;
 }
+
+.card-list{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card-item>img{
+    width: 80px;
+}
+
+.card-item>p{
+    padding-left: 10px;
+}
