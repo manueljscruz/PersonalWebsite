@@ -1,3 +1,4 @@
+// Switch tab pages and active navigation 
 function openPage(pageName, element){
     var tab, tablinks, tablink;
 
@@ -34,17 +35,19 @@ function openPage(pageName, element){
     } 
 }
 
-
+// Twitch player embedded 
 var embed = new Twitch.Embed("twitch-embed", {
     width: 1280,
-    height: 480,
+    height: 720,
     channel: "mcthewhite",
     layout: "video",
     autoplay: false,
     parent: ["localhost"]
-  });
+});
 
-  embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
     var player = embed.getPlayer();
     player.play();
-  });
+});
+
+ 

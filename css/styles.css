@@ -131,3 +131,46 @@ a:hover{
 .card-item>p{
     padding-left: 10px;
 }
+
+label{
+    font-family: 'montserratregular';
+    color: #F5EFED;
+}
+
+input{
+    font-family: 'montserratregular';
+}
+
+.submit-btn{
+    color: #F5EFED;
+    border: 1;
+    border-color: #F26419;
+}
+
+.submit-btn:hover{
+    background-color: rgba(245, 239, 237, .2);
+    color: #F26419;
+}
+
+.separator_5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.special_input{
+    display: none !important; 
+}
+
+.work_col{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.github_card{
+    border: 1px solid #F5EFED;
+    border-radius: 8px;
+    padding: 20px;
+    color: #F26419;
+    min-width: 250px;
+}
