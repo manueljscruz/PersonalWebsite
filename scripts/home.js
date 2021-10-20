@@ -41,7 +41,6 @@ var embed = new Twitch.Embed("twitch-embed", {
     height: 720,
     channel: "mcthewhite",
     layout: "video",
-    autoplay: false,
     parent: ["localhost"]
 });
 
