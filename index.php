@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -87,64 +90,78 @@
                 <div class="row">
                     <h3 class="h3-alternative">Skills</h3>
                 </div>
+                <!-- Skills Headers-->
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col">
                         <h3 class="h3-alternative">Programming Languages</h3>
-                        <div class="card-list">
-                            <div class="card-item">
-                                <img src="images/csharp.png"/>
-                                <p>C#</p>
-                            </div>
-                            <div class="card-item">
-                                <img src="images/php.png"/>
-                                <p>PHP</p>
-                            </div>
-                            <div class="card-item">
-                                <img src="images/javascript.png"/>
-                                <p>Javascript</p>
-                            </div>
-                            <div class="card-item">
-                                <img src="images/sql.png"/>
-                                <p>SQL</p>
-                            </div>
-                            <div class="card-item">
-                                <img src="images/mysql.png"/>
-                                <p>MySQL</p>
-                            </div>
-                        </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col">
                         <h3 class="h3-alternative">Areas</h3>
-                        <div class="card-list">
-                            <div class="card-item">
-                                <img src="images/xamarin.png"/>
-                                <p>Mobile Development (Xamarin)</p>
-                            </div>
-                            <div class="card-item">
-                                <img src="images/webdev.png"/>
-                                <p>Software & Web Development</p>
-                            </div>
-                            <div class="card-item">
-                                <img src="images/gamedev.png"/>
-                                <p>Game Development</p>
-                            </div>
+                    </div>
+                    <div class="col">
+                        <h3 class="h3-alternative">Other</h3>
+                    </div>
+                </div>
+                <!-- Skills 1st Row -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/csharp.png"/>
+                            <p>C#</p>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <h3 class="h3-alternative">Other</h3>
-                        <div class="card-list">
-                            <div class="card-item">
-                                <img src="images/mvc.png"/>
-                                <p>MVC</p>
-                            </div>
-                            <div class="card-item">
-                                <img src="images/mvvm.png"/>
-                                <p>MVVM</p>
-                            </div>
-                            <div class="card-item">
-                                <img src="images/unity.png"/>
-                                <p>Unity</p>
-                            </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/xamarin.png"/>
+                            <p>Mobile Development (Xamarin)</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/mvc.png"/>
+                            <p>MVC</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skills 2nd Row -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/php.png"/>
+                            <p>PHP</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/webdev.png"/>
+                            <p>Software & Web Development</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/mvvm.png"/>
+                            <p>MVVM</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skills 3rd Row -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/javascript.png"/>
+                            <p>Javascript</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/gamedev.png"/>
+                            <p>Game Development</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <img src="images/unity.png"/>
+                            <p>Unity</p>
                         </div>
                     </div>
                 </div>
@@ -193,6 +210,25 @@
                 <div class="row">
                     <h3 class="h3-alternative">Contact</h3>
                 </div>
+                <?php
+                    if (isset($_SESSION['success'])) 
+                    {
+                        echo ('<script type="text/javascript"> openPage("contact", this);</script>');
+
+                        echo ('<div class="alert alert-success" role="alert">');
+                        echo $_SESSION['success'];
+                        echo ('</div>');
+                        unset($_SESSION['success']);
+                    }
+                    if (isset($_SESSION['error'])) 
+                    {
+                        echo '<script type="text/javascript"> openPage("contact", this);</script>';
+                        echo ('<div class="alert alert-danger" role="alert">');
+                        echo $_SESSION['error'];
+                        echo ('</div>');
+                        unset($_SESSION['error']);
+                    }
+                ?>
                 <div class="row">
                     <form id="email-form" action="contactform.php" name="email-form" data-name="Email Form" method="post">
                         <div class="col separator_5">
