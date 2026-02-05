@@ -167,27 +167,178 @@ input{
     display: none !important; 
 }
 
-.work_col{
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+/* Work Section */
+#work {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 40px;
 }
 
+.work-grid {
+    gap: 30px;
+}
+
+.work-section {
+    background: rgba(245, 239, 237, 0.03);
+    border: 1px solid rgba(245, 239, 237, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    height: 100%;
+}
+
+.work-section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(242, 100, 25, 0.3);
+}
+
+.work-icon {
+    font-size: 2rem;
+    color: #F26419;
+}
+
+.work-section-title {
+    color: #F26419;
+    font-family: 'montserratsemibold';
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.work-section-content {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Custom scrollbar for work section */
+.work-section-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.work-section-content::-webkit-scrollbar-track {
+    background: rgba(245, 239, 237, 0.05);
+    border-radius: 3px;
+}
+
+.work-section-content::-webkit-scrollbar-thumb {
+    background: rgba(242, 100, 25, 0.5);
+    border-radius: 3px;
+}
+
+.work-section-content::-webkit-scrollbar-thumb:hover {
+    background: #F26419;
+}
+
+/* Work Cards - Shared Styles */
 .work_card {
-	border: 1px solid #F5EFED;
-	border-radius: 8px;
-	padding: 20px;
-	color: #F26419;
-	min-width: 250px;
-	display: flex;
-	flex-direction: column;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(245, 239, 237, 0.05);
+    border: 1px solid rgba(245, 239, 237, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.work_card:hover {
+    background: rgba(245, 239, 237, 0.1);
+    border-color: #F26419;
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(242, 100, 25, 0.15);
+}
+
+.work_card:hover .card-link-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card-header-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
     margin-bottom: 10px;
 }
 
-.work_card:hover{
-    background-color: rgba(245, 239, 237, .2);
+.card-icon {
+    color: #F26419;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.card-title {
+    color: #F5EFED;
+    font-family: 'montserratsemibold';
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.card-description {
+    color: rgba(245, 239, 237, 0.7);
+    font-family: 'montserratregular';
+    font-size: 0.85rem;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.card-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.language-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(245, 239, 237, 0.8);
+    font-family: 'montserratregular';
+    font-size: 0.8rem;
+}
+
+.language-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.date-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(245, 239, 237, 0.7);
+    font-family: 'montserratregular';
+    font-size: 0.8rem;
+}
+
+.date-badge i {
+    color: #F26419;
+}
+
+.card-link-icon {
+    color: #F26419;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+/* GitHub Card specific */
+.github-card .card-title {
+    word-break: break-word;
+}
+
+/* Blog Card specific */
+.blog-card .card-title {
+    margin-bottom: 10px;
 }
 
 #skills{
@@ -315,9 +466,20 @@ input{
     }
 
     /* Work Section */
-    .work_col {
-        height: auto;
+    .work-section {
+        margin-bottom: 20px;
+    }
+
+    .work-section-content {
         max-height: 50vh;
+    }
+
+    .work-icon {
+        font-size: 1.5rem;
+    }
+
+    .work-section-title {
+        font-size: 1.1rem;
     }
 
     /* Tab Content */
