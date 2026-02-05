@@ -35,13 +35,13 @@ function openPage(pageName, element){
     } 
 }
 
-// Twitch player embedded 
+// Twitch player embedded - responsive
 var embed = new Twitch.Embed("twitch-embed", {
-    width: 1280,
-    height: 720,
+    width: "100%",
+    height: "100%",
     channel: "mcthewhite",
     layout: "video",
-    parent: ["localhost"]
+    parent: ["localhost", "manueljscruz.online"]
 });
 
 embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {

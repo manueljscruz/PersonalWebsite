@@ -19,6 +19,11 @@ header {
 	position: fixed;
 	left: 0;
     right: 0;
+    /* Glassmorphism effect */
+    background: rgba(15, 10, 10, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(245, 239, 237, 0.1);
 }
 
 #home{
@@ -186,5 +191,176 @@ input{
 }
 
 #skills{
-    height: 70vh;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+/* Skills Section - Grouped Cards */
+.section-title {
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    gap: 20px;
+}
+
+.skill-group {
+    background: rgba(245, 239, 237, 0.05);
+    border: 1px solid rgba(245, 239, 237, 0.15);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.skill-group:hover {
+    background: rgba(245, 239, 237, 0.1);
+    border-color: #F26419;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(242, 100, 25, 0.15);
+}
+
+.skill-group-title {
+    color: #F26419;
+    font-family: 'montserratsemibold';
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(242, 100, 25, 0.3);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: rgba(242, 100, 25, 0.15);
+    color: #F5EFED;
+    font-family: 'montserratregular';
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(242, 100, 25, 0.3);
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: #F26419;
+    color: #0F0A0A;
+    transform: scale(1.05);
+}
+
+/* Enhanced Work Cards */
+.work_card {
+    transition: all 0.3s ease;
+}
+
+.work_card:hover {
+    background-color: rgba(245, 239, 237, .1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Header Navigation */
+    header {
+        flex-wrap: wrap;
+        padding: 5px 0;
+    }
+
+    .tablink {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    /* Home Cover */
+    #cover-content h1 {
+        font-size: 2rem;
+        padding: 0 15px;
+    }
+
+    #cover-content h3 {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    /* About Section */
+    .about-list h5 {
+        font-size: 1rem;
+    }
+
+    .about-list p {
+        font-size: 0.9rem;
+    }
+
+    /* Skills Cards */
+    .card-item > img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Skills Groups */
+    .skill-group {
+        padding: 20px;
+    }
+
+    .skill-tag {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    /* Work Section */
+    .work_col {
+        height: auto;
+        max-height: 50vh;
+    }
+
+    /* Tab Content */
+    .tabcontent {
+        padding-top: 60px;
+    }
+
+    .tab-active {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Smaller mobile screens */
+    header {
+        justify-content: space-around;
+    }
+
+    .tablink {
+        padding: 8px 8px;
+        font-size: 12px;
+    }
+
+    #cover-content h1 {
+        font-size: 1.5rem;
+    }
+
+    #cover-content h3 {
+        font-size: 0.85rem;
+    }
+
+    .h3-alternative {
+        font-size: 1.2rem;
+    }
+
+    .card-item > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .work_card {
+        padding: 15px;
+        min-width: auto;
+    }
 }
