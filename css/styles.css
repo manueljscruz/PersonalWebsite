@@ -380,6 +380,13 @@ input{
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(242, 100, 25, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-group-title i {
+    font-size: 1.2rem;
 }
 
 .skill-tags {
@@ -403,6 +410,49 @@ input{
     background: #F26419;
     color: #0F0A0A;
     transform: scale(1.05);
+}
+
+/* Certification link tag */
+.skill-tag-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    background: rgba(50, 116, 109, 0.2);
+    border-color: rgba(50, 116, 109, 0.5);
+}
+
+.skill-tag-link:hover {
+    background: #32746D;
+    color: #F5EFED;
+    transform: scale(1.05);
+}
+
+.skill-tag-link i {
+    font-size: 0.85rem;
+}
+
+/* Certifications group */
+.certifications-group {
+    background: rgba(50, 116, 109, 0.05);
+    border-color: rgba(50, 116, 109, 0.2);
+}
+
+.certifications-group:hover {
+    border-color: #32746D;
+    box-shadow: 0 10px 30px rgba(50, 116, 109, 0.15);
+}
+
+.certifications-group .skill-group-title {
+    color: #32746D;
+    border-bottom-color: rgba(50, 116, 109, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.certifications-group .skill-group-title i {
+    font-size: 1.2rem;
 }
 
 /* Enhanced Work Cards */
