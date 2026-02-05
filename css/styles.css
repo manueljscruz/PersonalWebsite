@@ -209,9 +209,16 @@ input{
 }
 
 .work-section-content {
-    max-height: 60vh;
-    overflow-y: auto;
-    padding-right: 10px;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+}
+
+/* Cards grid layout */
+.work-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 /* Custom scrollbar for work section */
@@ -241,9 +248,10 @@ input{
     border: 1px solid rgba(245, 239, 237, 0.15);
     border-radius: 12px;
     padding: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     transition: all 0.3s ease;
     text-decoration: none;
+    height: 100%;
 }
 
 .work_card:hover {
@@ -520,8 +528,8 @@ input{
         margin-bottom: 20px;
     }
 
-    .work-section-content {
-        max-height: 50vh;
+    .work-cards-grid {
+        grid-template-columns: 1fr;
     }
 
     .work-icon {
